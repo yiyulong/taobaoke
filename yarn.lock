@@ -4890,6 +4890,18 @@ is-docker@^2.0.0:
   resolved "https://registry.npm.taobao.org/is-docker/download/is-docker-2.1.1.tgz#4125a88e44e450d384e09047ede71adc2d144156"
   integrity sha1-QSWojkTkUNOE4JBH7eca3C0UQVY=
 
+is-dom-node-list@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npm.taobao.org/is-dom-node-list/download/is-dom-node-list-1.2.1.tgz#141ded0c66de759d0976800d21370bb908f2950f"
+  integrity sha1-FB3tDGbedZ0JdoANITcLuQjylQ8=
+  dependencies:
+    is-dom-node "^1.0.4"
+
+is-dom-node@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/is-dom-node/download/is-dom-node-1.0.4.tgz#abb18af7133f1e687610cfeb274da1ced342f1c5"
+  integrity sha1-q7GK9xM/Hmh2EM/rJ02hztNC8cU=
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npm.taobao.org/is-extendable/download/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -5697,6 +5709,11 @@ minipass@^3.0.0, minipass@^3.1.1:
   integrity sha1-fUL/HzljVILhX5zbUxhN7r1YFf0=
   dependencies:
     yallist "^4.0.0"
+
+miniraf@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/miniraf/download/miniraf-1.0.0.tgz#5d88e108bbdcb55b4a2ff3da337f24a13a3377e1"
+  integrity sha1-XYjhCLvctVtKL/PaM38koTozd+E=
 
 minizlib@^2.1.1:
   version "2.1.2"
@@ -6976,7 +6993,7 @@ qs@6.7.0:
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
-quasar@^1.0.0:
+quasar@^1.14.5:
   version "1.14.5"
   resolved "https://registry.npm.taobao.org/quasar/download/quasar-1.14.5.tgz#dd432ea9b0d7d7e7cedf12e2d8a20d35e944d4e9"
   integrity sha1-3UMuqbDX1+fO3xLi2KINNelE1Ok=
@@ -7179,6 +7196,11 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.npm.taobao.org/relateurl/download/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+rematrix@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/rematrix/download/rematrix-0.3.0.tgz#4f3f9156aa80ded8a8ca23785f48c6012b6dea4a"
+  integrity sha1-Tz+RVqqA3tioyiN4X0jGAStt6ko=
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -7455,6 +7477,15 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.6"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
+
+scrollreveal@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.npm.taobao.org/scrollreveal/download/scrollreveal-4.0.7.tgz#a1e1a969431ec3b1dc6c19d8d36ed8fd8cfe4412"
+  integrity sha1-oeGpaUMew7HcbBnY027Y/Yz+RBI=
+  dependencies:
+    miniraf "1.0.0"
+    rematrix "0.3.0"
+    tealight "0.3.6"
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -8147,6 +8178,14 @@ tar@^6.0.2:
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
+
+tealight@0.3.6:
+  version "0.3.6"
+  resolved "https://registry.npm.taobao.org/tealight/download/tealight-0.3.6.tgz#14c8071ce3c188972a5cb7d8a5668ca2820b4292"
+  integrity sha1-FMgHHOPBiJcqXLfYpWaMooILQpI=
+  dependencies:
+    is-dom-node "^1.0.4"
+    is-dom-node-list "^1.2.1"
 
 terser-webpack-plugin@4.2.2:
   version "4.2.2"

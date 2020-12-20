@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 
 import routes from './routes'
 
+import { SessionStorage } from 'quasar'
+import getPageTitle from '../utils/get-page-title'
+
 Vue.use(VueRouter)
 
 /*
@@ -25,6 +28,10 @@ export default function (/* { store, ssrContext } */) {
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE
   })
-
+  Router.beforeEach((to, from, next) => {
+    document.title = getPageTitle(to.meta.title)
+    to.query?.employeeNumber && SessionStorage.set('employeeNumber', to.query.employeeNumber)
+    next()
+  })
   return Router
 }
