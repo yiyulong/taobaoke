@@ -8,7 +8,7 @@
         </q-avatar>
         <q-toolbar-title class="cursor-pointer" :style="{ 'font-size': $q.screen.lt.md ? $q.screen.lt.sm ? '16px' : '18px' : ''}">淘宝客</q-toolbar-title>
         <q-space />
-        <template v-if="!$q.platform.is.mobile">
+        <template v-if="$q.screen.gt.xs">
           <q-btn flat label="首页" to="/" />
           <q-btn flat label="公司介绍" to="introduce" />
           <q-btn flat label="新闻中心" to="news" />
@@ -118,23 +118,32 @@
     <q-page-container>
       <router-view :key="key" />
       <q-page-sticky position="bottom-right" :offset="[18, 100]">
-        <q-btn class="animated tada delay-5s slower infinite" icon="r_assignment" label="申请加入" size="md" stack fab color="primary" @click="show = true" />
+        <q-btn
+          class="animated tada delay-5s slower infinite"
+          icon="r_assignment"
+          label="申请加入"
+          :size="$q.screen.lt.md ? $q.screen.lt.sm ? 'md' : 'lg' : 'xl'"
+          padding="md"
+          stack rounded
+          color="primary"
+          @click="show = true"
+        />
       </q-page-sticky>
       <q-page-scroller position="bottom-right" :scroll-offset="500" :offset="[18, 18]">
         <q-btn round icon="keyboard_arrow_up" color="primary" />
       </q-page-scroller>
-      <!-- full-width -->
-      <q-dialog v-model="show">
+      <q-dialog v-model="show" :full-width="$q.screen.lt.sm">
         <q-card>
           <q-card-section>
-            <div class="text-h6">申请加入</div>
+            <div :class="$q.screen.lt.md ? $q.screen.lt.sm ? 'text-subtitle2' : 'text-subtitle1' : 'text-h6'">申请加入</div>
           </q-card-section>
           <q-separator />
           <q-card-section>
-            <div class="q-gutter-y-sm input-box">
+            <div class="q-gutter-y-sm" :class="$q.screen.lt.sm ? 'dense' : 'input-box'">
               <q-input
                 outlined
                 clearable
+                :dense="$q.screen.lt.sm"
                 v-model="userName"
                 :rules="[val => !!val || '请输入用户名']"
                 placeholder="用户名"
@@ -147,6 +156,7 @@
                 outlined
                 clearable
                 unmasked-value
+                :dense="$q.screen.lt.sm"
                 type="tel"
                 mask="###-####-####"
                 v-model="phoneNumber"
@@ -158,8 +168,15 @@
                 </template>
               </q-input>
             </div>
+            <div class="q-py-sm">
+              <q-btn class="full-width" unelevated size="md" padding="sm none" icon="r_done" label="立即加入" color="primary" :loading="loading" @click="join">
+              <template v-slot:loading>
+                <q-spinner-facebook />请稍后...
+              </template>
+            </q-btn>
+            </div>
           </q-card-section>
-          <q-separator />
+          <!-- <q-separator />
           <q-card-actions align="around">
             <q-btn flat icon="r_close" label="取消" v-close-popup />
             <q-btn unelevated icon="r_done" label="立即加入" color="primary" :loading="loading" @click="join">
@@ -167,7 +184,7 @@
                 <q-spinner-facebook />请稍后...
               </template>
             </q-btn>
-          </q-card-actions>
+          </q-card-actions> -->
         </q-card>
       </q-dialog>
     </q-page-container>
@@ -242,6 +259,9 @@ export default {
 <style lang="scss" scoped>
 .input-box {
   width: 360px;
+}
+.input-box.dense {
+  width: 100%;
 }
 .footer-box {
   background: url(http://du.yyjic.com/images/img/footer_bg-1.jpg) no-repeat center;

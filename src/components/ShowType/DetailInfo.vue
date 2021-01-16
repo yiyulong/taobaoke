@@ -5,7 +5,7 @@
         <li :key="index" :class="['q-py-sm', $q.screen.lt.sm ? '' : 'row no-wrap justify-around items-center q-py-md', index%2 ? 'reverse' : '']">
           <div class="col-5 title">
             <div class="row no-wrap items-center">
-              <div class="index">{{ index }}</div>
+              <div class="index">{{ index + 1 | formatNum }}</div>
               <div>
                 <h5>{{ item.title }}</h5>
                 <p>{{ item.subTitle }}</p>
@@ -37,24 +37,34 @@ export default {
     }
   },
   mounted () {
-    this.scrollReveal.reveal('.animate.right', {
-      viewFactor: 0.5,
-      distance: '200px',
-      duration: 1200,
-      origin: 'right',
-      cleanup: true,
-      mobile: false
-      // reset: true
-    })
-    this.scrollReveal.reveal('.animate.left', {
-      viewFactor: 0.5,
-      distance: '200px',
-      duration: 1200,
-      origin: 'left',
-      cleanup: true,
-      mobile: false
-      // reset: true
-    })
+    setTimeout(() => {
+      this.scrollReveal.reveal('.animate.right', {
+        viewFactor: 0.5,
+        distance: '200px',
+        duration: 1200,
+        origin: 'right',
+        cleanup: true,
+        mobile: false
+        // reset: true
+      })
+      this.scrollReveal.reveal('.animate.left', {
+        viewFactor: 0.5,
+        distance: '200px',
+        duration: 1200,
+        origin: 'left',
+        cleanup: true,
+        mobile: false
+        // reset: true
+      })
+    }, 2000)
+  },
+  filters: {
+    formatNum (val) {
+      if (val < 10) {
+        return '0' + val
+      }
+      return val
+    }
   },
   data () {
     return {

@@ -27,15 +27,17 @@ export default {
     }
   },
   mounted () {
-    this.scrollReveal.reveal('.animate.scale', {
-      viewFactor: 0.5,
-      scale: 0.8,
-      interval: 200,
-      duration: 1000,
-      cleanup: true,
-      mobile: false
-      // reset: true
-    })
+    setTimeout(() => {
+      this.scrollReveal.reveal('.animate.scale', {
+        viewFactor: 0.5,
+        scale: 0.8,
+        interval: 200,
+        duration: 1000,
+        cleanup: true,
+        mobile: false
+        // reset: true
+      })
+    }, 2000)
   },
   data () {
     return {
