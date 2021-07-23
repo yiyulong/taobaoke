@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="container">
     <li v-for="(src, index) of srcs" :key="index">
       <img class="full-width" :src="src" />
     </li>

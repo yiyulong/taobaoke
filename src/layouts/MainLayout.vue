@@ -2,12 +2,14 @@
   <q-layout view="hHh lpR ffr">
 
     <q-header elevated class="bg-primary text-white">
-      <q-toolbar>
+      <q-toolbar class="q-py-lg container">
         <q-avatar class="cursor-pointer">
-          <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          <img src="aslm.png">
         </q-avatar>
-        <q-toolbar-title class="cursor-pointer" :style="{ 'font-size': $q.screen.lt.md ? $q.screen.lt.sm ? '16px' : '18px' : ''}">淘宝客</q-toolbar-title>
-        <q-space />
+        <q-toolbar-title class="cursor-pointer">
+          <p :style="{ 'font-size': $q.screen.lt.md ? $q.screen.lt.sm ? '16px' : '18px' : ''}">安盟电商</p>
+          <p :style="{ 'font-size': $q.screen.lt.md ? $q.screen.lt.sm ? '10px' : '12px' : '12px', 'line-height': '12px;'}">淘宝团长</p></q-toolbar-title>
+        <!-- <q-space /> -->
         <template v-if="$q.screen.gt.xs">
           <q-btn flat label="首页" to="/" />
           <q-btn flat label="公司介绍" to="introduce" />
@@ -29,8 +31,18 @@
                   <q-avatar icon="r_call" />
                 </q-item-section>
                 <q-item-section>
-                  <q-item-label>13111111111</q-item-label>
-                  <q-item-label caption>(021)12345</q-item-label>
+                  <q-item-label>15256036813</q-item-label>
+                  <!-- <q-item-label caption>(021)12345</q-item-label> -->
+                </q-item-section>
+              </q-item>
+              <q-separator inset />
+              <q-item clickable v-close-popup tabindex="2">
+                <q-item-section avatar>
+                  <q-avatar icon="r_call" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>18856964046</q-item-label>
+                  <!-- <q-item-label caption>(021)12345</q-item-label> -->
                 </q-item-section>
               </q-item>
             </q-list>
@@ -106,7 +118,8 @@
 
                   <q-item-section>
                     <q-item-label>联系我们</q-item-label>
-                    <q-item-label caption>13111111111</q-item-label>
+                    <q-item-label caption><a href="tel:15256036813" style="color: currentColor;">15256036813</a></q-item-label>
+                    <q-item-label caption><a href="tel:18856964046" style="color: currentColor;">18856964046</a></q-item-label>
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -194,18 +207,26 @@
         <div class="container">
           <ul class="row no-wrap justify-center q-py-md">
             <li class="">
-              <div class="text-center">
+              <!-- <div class="text-center">
                 <p :class="$q.screen.lt.sm ? 'text-subtitle2 q-pb-sm' : 'text-h6 q-mb-md'">网站地图</p>
                 <div>
                   <router-link to="/" tag="p" class="q-py-xs cursor-pointer" :class="$q.screen.lt.sm ? 'text-caption' : ''">首页</router-link>
                   <router-link to="introduce" tag="p" class="q-py-xs cursor-pointer" :class="$q.screen.lt.sm ? 'text-caption' : ''">公司介绍</router-link>
                   <router-link to="news" tag="p" class="q-py-xs cursor-pointer" :class="$q.screen.lt.sm ? 'text-caption' : ''">新闻中心</router-link>
                 </div>
+              </div> -->
+              <div class="text-center">
+                <div>
+                  <p class="q-py-xs" :class="$q.screen.lt.sm ? 'text-caption' : ''">公司地址：安徽省合肥市安徽国际经融中心B座2805A</p>
+                  <p class="q-py-xs" :class="$q.screen.lt.sm ? 'text-caption' : ''">
+                    招商部联系方式：<a href="tel:18856964046" style="color: currentColor;">18856964046</a>
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
         </div>
-        <p class="q-pb-xs text-center">&copy; 2020 taobaoke</p>
+        <p class="q-pb-xs text-center">&copy; 2020 anmeng</p>
       </div>
     </q-footer>
   </q-layout>

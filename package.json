@@ -14,7 +14,10 @@
     "axios": "^0.18.1",
     "core-js": "^3.6.5",
     "quasar": "^1.14.5",
-    "scrollreveal": "^4.0.7"
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugins": "^1.0.8",
+    "scrollreveal": "^4.0.7",
+    "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

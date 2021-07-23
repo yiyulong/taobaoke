@@ -7478,6 +7478,16 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scrollmagic-plugins@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npm.taobao.org/scrollmagic-plugins/download/scrollmagic-plugins-1.0.8.tgz#40ddfb598edc42885c945b151993beee8b4f755a"
+  integrity sha1-QN37WY7cQohclFsVGZO+7otPdVo=
+
+scrollmagic@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.npm.taobao.org/scrollmagic/download/scrollmagic-2.0.8.tgz#e0d7aff804c393c022fdc0c566f1edce3b4e9ed7"
+  integrity sha1-4Nev+ATDk8Ai/cDFZvHtzjtOntc=
+
 scrollreveal@^4.0.7:
   version "4.0.7"
   resolved "https://registry.npm.taobao.org/scrollreveal/download/scrollreveal-4.0.7.tgz#a1e1a969431ec3b1dc6c19d8d36ed8fd8cfe4412"
@@ -8640,6 +8650,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+velocity-animate@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.npm.taobao.org/velocity-animate/download/velocity-animate-1.5.2.tgz#5a351d75fca2a92756f5c3867548b873f6c32105"
+  integrity sha1-WjUddfyiqSdW9cOGdUi4c/bDIQU=
 
 vendors@^1.0.0:
   version "1.0.4"

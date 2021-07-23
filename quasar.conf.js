@@ -48,9 +48,9 @@ module.exports = function (ctx) {
     build: {
       env: {
         API: ctx.dev ? 'http://121.4.32.21:8080/taobaoke' : 'http://121.4.32.21:8080/taobaoke',
-        PAGE_TITLE: '淘宝客'
+        PAGE_TITLE: '安盟电商'
       },
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
 

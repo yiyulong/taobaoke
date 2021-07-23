@@ -10,13 +10,15 @@ ul, ol {
 img {
   vertical-align: middle;
 }
-
-@media screen and (max-width: 1200px) {
-  .container {
-    padding: 0 10px;
-  }
-}
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    // width: 96%;
+  }
 }

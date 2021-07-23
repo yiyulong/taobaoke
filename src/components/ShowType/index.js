@@ -1,5 +1,5 @@
 const ShowType = {},
-  components = ['Carousel', 'DetailImgs', 'DetailInfo', 'InfoList', 'DetailDesc']
+  components = ['Carousel', 'DetailImgs', 'DetailInfo', 'InfoList', 'DetailDesc', 'RichText']
 for (const val of components) {
   ShowType[val] = () => import('./' + val + '.vue')
 }
@@ -24,6 +24,8 @@ const isComponents = (showType) => {
     case 4:
       str = 'DetailDesc'
       break
+    case 9:
+      str = 'RichText'
   }
   return str
 }
